@@ -1,0 +1,81 @@
+.tarifas{
+    padding: $separacion 0;
+
+    h3{
+        text-align: center;
+        margin-bottom: $separacion / 2;
+    }
+}
+
+.contenedor-tarifas{
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet{
+        @include grid (2, $separacion)
+    }
+}
+
+.contenido-tarifas{
+    p{
+        text-align: center;
+        color: $colorCuarto;
+        font-size: 2rem;
+        margin-bottom: $separacion / 3;
+
+    }
+}
+
+.tarifa{
+    width: 100%;
+    border-spacing: 0;
+    margin-bottom: $separacion / 2;
+
+    thead{
+        background-color: $colorCuarto;
+
+        th{
+            padding: $separacion / 4;
+            color: $blanco;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-family: $fuenteSecundaria;
+        }
+
+    }
+
+    tbody{
+        background-color: $blanco;
+
+        td{
+            padding: $separacion / 4;
+            border-bottom: 1px solid #e1e1e1;
+            font-size: 1.2rem;
+            font-family: $fuentePrincipal;
+        }
+
+        tr{
+            &:last-of-type{
+                td{
+                    border: none;
+                }
+            }
+        }
+    }
+
+    tfoot{
+        background-color: $colorTerciario;
+
+        td{
+            padding: $separacion / 4;
+            font-family: $fuenteSecundaria;
+            font-size: 1.4rem;
+            text-align: center;
+
+            span{
+                font-weight: bolder;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

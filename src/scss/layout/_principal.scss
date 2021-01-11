@@ -1,0 +1,23 @@
+.contenido-principal{
+    padding: $separacion 0;
+
+    @include tablet{
+        @include grid(2, 2rem);
+    }
+}
+
+.info-principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .ubicacion{
+        margin: $separacion / 3 0;
+        color: $colorCuarto;
+        font-weight: 700;
+    }
+
+    .texto-principal{
+        line-height: 1.5;
+    }
+}

@@ -1,0 +1,74 @@
+.site-header{
+    background-color: $colorTerciario;
+
+    .contenido-header{
+        padding: $separacion / 3 0;
+
+        @include tablet{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    h1{
+        margin-bottom: 1rem;
+        text-align: center;
+
+        @include tablet{
+            margin-bottom: 0;
+        }
+    }
+
+    &.fijo{
+        position: fixed;
+        width: 100%;
+        box-shadow: 0 .3rem .3rem #444;
+    }
+}
+
+.navegacion-principal{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+
+    a{
+        color: $negro;
+
+        &:hover{
+            color: $blanco;
+        }
+    }
+}
+
+.hero{
+    position: relative;
+    background-image: url(../../../build/img/workspace.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    max-height: 50rem;
+
+    .overlay{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: $negro , $alpha: .3);
+    }
+}
+
+.contenido-hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h2{
+        font-size: 4rem;
+    }
+
+    h2, p{
+        color: $blanco;
+    }
+}

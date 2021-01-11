@@ -1,0 +1,52 @@
+.galeria{
+    padding-bottom: $separacion;
+    
+    h3{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+}
+
+.galeria-imagenes{
+    padding: 0;
+    list-style: none;
+
+    @include grid(2, $separacion / 2);
+
+    @include tablet {
+        @include grid(3, $separacion / 3);
+    }
+
+    @include desktop{
+        @include grid(4, $separacion / 4)
+    }
+}
+
+.overlay{
+    position: fixed;
+    background-color: rgba($color: #000000, $alpha: .5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: grid;
+    place-items: center;
+
+    img{
+        width: 50%;
+    }
+}
+
+.btn-cerrar{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba($color: #ffffff, $alpha: .6);
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+    border-radius: 50%;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

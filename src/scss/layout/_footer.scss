@@ -1,0 +1,53 @@
+.footer{
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#271f1f+0,624132+100&1+0,0.86+100 */
+background: -moz-linear-gradient(left,  rgba(39,31,31,1) 0%, rgba(98,65,50,0.86) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left,  rgba(39,31,31,1) 0%,rgba(98,65,50,0.86) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right,  rgba(39,31,31,1) 0%,rgba(98,65,50,0.86) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#271f1f', endColorstr='#db624132',GradientType=1 ); /* IE6-9 */
+
+
+}
+
+.contenido-footer{
+    padding: $separacion / 3 0;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include tablet{
+        @include grid(2, $separacion);
+    }
+    
+    h4{
+        text-align: center;
+        color: $blanco;
+        margin-bottom: $separacion / 4;
+    }
+
+    .social-media{
+        text-align: center;
+    }
+}
+
+.texto-footer{
+    @include tablet{
+        h4{
+            text-align: start;
+        }
+    }
+}
+
+.redes{
+    margin-bottom: $separacion / 3;
+    display: flex;
+    justify-content: center;
+    gap: $separacion;
+
+    i{
+        color: $blanco;
+        font-size: 2.5rem;
+
+        &:hover{
+            color: $colorTerciario;
+        }
+    }
+}
