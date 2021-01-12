@@ -12,26 +12,26 @@ function css(){
         .pipe( sass({
             outputStyle: 'expanded'
         }) )                                    // APLICA LA FUNCION DE COMPILAR
-        .pipe( dest('./build/css') )           // DONDE GUARDAMOS EL ARCHIVO
+        .pipe( dest('./pplbuild/css') )           // DONDE GUARDAMOS EL ARCHIVO
 }
 
 function javascript(){
     return src('src/js/**/*.js')
     .pipe(concat('bundle.js'))
-    .pipe(dest('./build/js'))
+    .pipe(dest('./pplbuild/js'))
 }
 
 function imagenes(){
     return src('src/img/**/*')
     .pipe( imagemin() )
-    .pipe( dest('./build/img'))
+    .pipe( dest('./pplbuild/img'))
     .pipe( notify({message: 'Imagen Minificada'}));
 }
 
 function versionwebp(){
     return src('src/img/**/*')
     .pipe (webp())
-    .pipe (dest('./build/img'))
+    .pipe (dest('./pplbuild/img'))
     .pipe(notify({message: 'Version webP lista'}))
 }
 
